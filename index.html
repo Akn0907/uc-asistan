@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ef">
+  <title>Üç Asistan — Gemini</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Üç Asistan ana sayfa"><span class="brand-mark">3</span><span>üç asistan</span></a>
+      <span class="local-badge"><i></i> Yerel ve güvenli</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span></span> YAPAY ZEKA ASİSTANIN</div>
+      <h1>Bir soru sor.<br><em>Gemini</em> yanıtlasın.</h1>
+      <p class="intro">Şimdilik yalnızca Gemini bağlı. Diğer asistanları ileride ekleyebilirsin.</p>
+
+      <form id="ask-form" class="prompt-box">
+        <label class="sr-only" for="question">Sorunuz</label>
+        <textarea id="question" rows="3" maxlength="20000" placeholder="Aklındaki soruyu buraya yaz..." required></textarea>
+        <div class="prompt-bottom">
+          <span class="hint">Soru yalnızca Gemini'ye gönderilir</span>
+          <button id="ask-button" type="submit"><span>Gemini'ye sor</span><span class="arrow">↗</span></button>
+        </div>
+      </form>
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="answers" class="answers" aria-label="Model yanıtları">
+      <article class="answer-card coming-soon" aria-label="ChatGPT daha sonra eklenecek">
+        <div class="card-head"><div class="model-id"><span class="model-icon openai-icon">✳</span><div><h2>ChatGPT</h2><p>OpenAI</p></div></div><span class="state">DAHA SONRA</span></div>
+        <div class="answer-body placeholder"></div>
+      </article>
+      <article class="answer-card" data-model="gemini">
+        <div class="card-head"><div class="model-id"><span class="model-icon gemini-icon">✦</span><div><h2>Gemini</h2><p>Google</p></div></div><span class="state">BEKLİYOR</span></div>
+        <div class="answer-body placeholder">Yanıtın burada görünecek.</div>
+      </article>
+      <article class="answer-card coming-soon" aria-label="Claude daha sonra eklenecek">
+        <div class="card-head"><div class="model-id"><span class="model-icon claude-icon">✳</span><div><h2>Claude</h2><p>Anthropic</p></div></div><span class="state">DAHA SONRA</span></div>
+        <div class="answer-body placeholder"></div>
+      </article>
+    </section>
+    <footer><span>Üç Asistan <span class="dot">·</span> Kişisel kullanım için yerel prototip</span><span>API kullanımı Google hesabında ücretlendirilebilir.</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
+
